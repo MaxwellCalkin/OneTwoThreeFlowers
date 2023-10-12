@@ -18,7 +18,7 @@ class Navbar extends Component {
             to="/"
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            My Flower Shop
+            One.. Two.. Three.. FLOWERS!
           </Typography>
           <div style={{ flexGrow: 1 }}></div>
           <Link to="/cart" style={{ textDecoration: "none", color: "inherit" }}>
