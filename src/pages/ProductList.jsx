@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { addToCart } from "../actions";
 import ProductCard from "../components/ProductCard";
 import { Grid } from "@mui/material";
+import { Link } from "react-router-dom";
+import ProductPage from "./ProductPage"; // Import the ProductPage component
 
 class ProductList extends Component {
   render() {
@@ -10,11 +12,19 @@ class ProductList extends Component {
 
     return (
       <Grid container spacing={2}>
-        {products.map((product) => (
-          <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
-            <ProductCard product={product} addToCart={addToCart} />
-          </Grid>
-        ))}
+        {products.map((product) => {
+          console.log("ProductList map", product.id);
+          return (
+            <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
+              <Link
+                to={`/product/${product.id}`}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <ProductCard product={product} addToCart={addToCart} />
+              </Link>
+            </Grid>
+          );
+        })}
       </Grid>
     );
   }
