@@ -1,9 +1,8 @@
+import { Card, CardContent, Stack } from "@mui/material";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { removeFromCart } from "../actions";
 import CartItem from "../components/CartItem";
-import { Card, CardContent, Typography, Stack } from "@mui/material";
-import { Link } from "react-router-dom";
 
 class Cart extends Component {
   render() {
@@ -14,20 +13,15 @@ class Cart extends Component {
         <h1>Shopping Cart</h1>
         <Stack spacing={2}>
           {cartIds.map((id) => (
-            <Link
-              to={`/product/${id}`}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <Card key={id}>
-                <CardContent>
-                  <CartItem
-                    item={products.find((product) => product.id == id)}
-                    removeFromCart={removeFromCart}
-                    quantity={this.props.cart[id]}
-                  />
-                </CardContent>
-              </Card>
-            </Link>
+            <Card key={id}>
+              <CardContent>
+                <CartItem
+                  item={products.find((product) => product.id == id)}
+                  removeFromCart={removeFromCart}
+                  quantity={this.props.cart[id]}
+                />
+              </CardContent>
+            </Card>
           ))}
         </Stack>
       </div>
