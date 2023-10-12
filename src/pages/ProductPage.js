@@ -47,6 +47,14 @@ const styles = {
     fontSize: "24px",
     marginBottom: "20px",
   },
+  buttons: {
+    display: "flex",
+    justifyContent: "space-between",
+    marginTop: "20px",
+  },
+  cartButton: {
+    marginLeft: "15px", // Add margin to create space
+  },
 };
 
 class ProductPage extends Component {
@@ -90,14 +98,33 @@ class ProductPage extends Component {
               <Typography variant="h6" style={styles.price}>
                 Price: ${product.price}
               </Typography>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={() => addToCart(product)}
-              >
-                Add to Cart
-              </Button>
-              <Link to="/">Back to Product List</Link>
+              <div style={styles.buttons}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={() => addToCart(product)}
+                >
+                  Add to Cart
+                </Button>
+                <Link to="/cart">
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    style={styles.cartButton}
+                  >
+                    Go to Cart
+                  </Button>
+                </Link>
+                <Link to="/">
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    style={styles.cartButton}
+                  >
+                    Back to Product List
+                  </Button>
+                </Link>
+              </div>
             </Paper>
           </Grid>
         </Grid>
