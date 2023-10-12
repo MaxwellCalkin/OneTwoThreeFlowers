@@ -1,7 +1,7 @@
-# One.. Two.. Three.. FLOWERS!: <a target="_blank" href="https://www.one-two-three-flowers.vercel.app">Visit Here</a>
+# One.. Two.. Three.. FLOWERS!: <a target="_blank" href="https://one-two-three-flowers.vercel.app/">Visit Here</a>
 
-<a target="_blank" href="https://www.one-two-three-flowers.vercel.app">
-  <img src="https://github.com/MaxwellCalkin/finance-hub/assets/101308415/64a23e35-3ec5-478d-bdbb-dd922d07f903" width="100%" alt="Portfolio"/>
+<a target="_blank" href="https://one-two-three-flowers.vercel.app/">
+  <img src="https://github.com/MaxwellCalkin/OneTwoThreeFlowers/blob/main/public/thumbnail.png?raw=true" width="100%" alt="Portfolio"/>
 </a>
 
 
@@ -34,7 +34,7 @@ Just a simple little app to learn and demonstrate some skills
         </a>
     </td>
     <td width="33.3%" valign="top">
-<a target="_blank" href="https://github.com/MaxwellCalkin/game-hub">MLB Lineup Simulator</a>
+<a target="_blank" href="https://github.com/MaxwellCalkin/game-hub">Game Hub</a>
       <br />
         <a target="_blank" href="https://github.com/MaxwellCalkin/game-hub">
           <img src="https://github.com/MaxwellCalkin/portfolio/blob/main/images/gameHub.gif" width="100%" alt="Game Hub"/>
