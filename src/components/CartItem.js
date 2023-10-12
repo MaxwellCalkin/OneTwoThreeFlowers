@@ -5,6 +5,7 @@ import {
   ListItemSecondaryAction,
   IconButton,
   Typography,
+  Avatar,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 
@@ -14,6 +15,11 @@ class CartItem extends Component {
 
     return (
       <ListItem>
+        <Avatar
+          alt={item.name}
+          src={item.image}
+          sx={{ mr: 3, width: 100, height: 100 }}
+        />
         <ListItemText
           primary={
             <>

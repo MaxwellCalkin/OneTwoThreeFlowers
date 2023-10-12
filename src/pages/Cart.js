@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { removeFromCart } from "../actions";
 import CartItem from "../components/CartItem";
+import { Card, CardContent, Typography, Stack } from "@mui/material";
 
 class Cart extends Component {
   render() {
@@ -10,19 +11,19 @@ class Cart extends Component {
     return (
       <div>
         <h1>Shopping Cart</h1>
-        <ul>
+        <Stack spacing={2}>
           {cartIds.map((id) => (
-            <CartItem
-              key={id}
-              item={products.find((product) => {
-                console.log(product.id, "id", id);
-                return product.id == id;
-              })}
-              removeFromCart={removeFromCart}
-              quantity={this.props.cart[id]}
-            />
+            <Card key={id}>
+              <CardContent>
+                <CartItem
+                  item={products.find((product) => product.id == id)}
+                  removeFromCart={removeFromCart}
+                  quantity={this.props.cart[id]}
+                />
+              </CardContent>
+            </Card>
           ))}
-        </ul>
+        </Stack>
       </div>
     );
   }
